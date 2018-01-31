@@ -1,0 +1,119 @@
+
+
+.room {
+    height: $room-description-min-height;
+    @media #{$desktop-condition} {
+        height: $room-description-min-height-desktop;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    @media #{$desktop-condition} {
+        align-items: center;
+        &:not(:last-of-type) {
+            margin-bottom: 8px;
+        }
+    }
+    @media #{$mobile-condition} {
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: 0;
+            background-color: $room-line-color;
+            // z-index: 100;
+        }
+    }
+}
+
+.room__description {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: $schedule-sidebar-width;
+    height: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include pad();
+    background-color: #FFFFFF;
+    @media #{$desktop-condition} {
+        width: $schedule-sidebar-width-desktop;
+        background-color: transparent;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    position: absolute;
+    @media #{$mobile-condition} {
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            right: 0;
+            background-color: $line-color;
+        }
+    }
+
+    // font-family: 'HelveticaNeue-Medium'; // TODO: check for validity
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.room:hover .room__title {
+    color: $primary-color-light;
+}
+
+.room:active .room__title {
+    color: $primary-color-active;
+}
+
+.room {
+    &--disabled,
+    &--disabled:hover {
+        .room__title,
+        .room__capacity {
+            color: #858E98;
+        }
+    }
+
+    // &:active {
+    //     .room__title,
+    //     .room__capacity {
+    //         color: #858E98;
+    //     }
+    // }
+}
+
+.room__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 140px;
+    @media #{$desktop-condition} {
+        width: 190px;
+    }
+    height: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.room__capacity {
+    // font-family: 'HelveticaNeue'; // TODO: check for validity
+    font-size: 13px;
+}
+
+.room__timeline {
+    flex-grow: 1;
+    flex-shrink: 0;
+    // margin-left: $schedule-sidebar-width-desktop;
+    margin-left: $timeline-margin-left;
+    height: $room-timeline-height;
+    @media #{$desktop-condition} {
+        margin-left: $timeline-margin-left-desktop;
+        height: $room-timeline-height-desktop;
+    }
+}

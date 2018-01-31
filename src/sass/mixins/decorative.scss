@@ -1,0 +1,11 @@
+@mixin line-after() {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: $line-color;
+        bottom: 0;
+        z-index: $top-line-z-index;
+    }
+}

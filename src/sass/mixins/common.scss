@@ -1,0 +1,15 @@
+@mixin reset-fieldset-style() {
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+@mixin reset-legend-style() {
+    display: block;
+    padding: 0;
+    margin: 0;
+}

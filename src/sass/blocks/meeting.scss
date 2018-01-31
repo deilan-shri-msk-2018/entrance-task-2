@@ -1,0 +1,73 @@
+.meeting-details {
+    // position: relative;
+    // padding-right: 50px;
+
+    &__title {
+        color: #000000;
+        margin-top: 0;
+        margin-bottom: 8px;
+        line-height: $line-height-lg;
+        font-weight: bold;
+        font-size: $font-size-lg;
+        @media #{$desktop-condition} {
+            margin-bottom: 2px;
+            font-size: $font-size-md;
+        }
+    }
+
+    &__description {
+        margin-bottom: 16px;
+        color: #333333;
+        font-size: $font-size-md;
+        @media #{$desktop-condition} {
+            font-size: $font-size-sm;
+        }
+    }
+    
+    &__date,
+    &__start-time,
+    &__end-time {
+        color: #151515;
+    }
+
+    &__attendees {
+        display: flex;
+        align-items: center;
+        font-size: $font-size-md;
+        @media #{$desktop-condition} {
+            font-size: $font-size-sm;
+        }
+    }
+
+    &__userpic {
+        margin-right: 8px;
+    }
+
+    &__owner {
+        color: #000000;
+    }
+
+    &__attendees-count {
+        color: #858e98;
+        line-height: 17px;
+    }
+
+    &__edit {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 24px;
+        height: 24px;
+        background-color: #E9ECEF;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+    }
+
+    &__edit-img {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        // fill: red;
+    }
+}

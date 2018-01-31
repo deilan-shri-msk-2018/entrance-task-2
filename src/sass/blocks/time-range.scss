@@ -1,0 +1,25 @@
+.time-range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-range__separator {
+    position: relative;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.47px;
+    @media #{$desktop-condition} {
+        bottom: -9px;
+    }
+}
+
+.time-range__field {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.time-range__separator {
+    margin-left: 4px;
+    margin-right: 4px;
+}

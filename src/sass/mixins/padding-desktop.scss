@@ -1,0 +1,32 @@
+$padding-desktop: 25px;
+
+@mixin pad-left-desktop-props {
+    padding-left: $padding-desktop;
+}
+
+@mixin pad-left-desktop {
+    @media #{$desktop-condition} {
+        @include pad-left-desktop-props();
+    }
+}
+
+@mixin pad-right-desktop-props {
+    padding-right: $padding-desktop;
+}
+
+@mixin pad-right-desktop {
+    @media #{$desktop-condition} {
+        @include pad-right-desktop-props();
+    }
+}
+
+@mixin pad-desktop-props {
+    @include pad-left-desktop-props();
+    @include pad-right-desktop-props();
+}
+
+@mixin pad-desktop {
+    @media #{$desktop-condition} {
+        @include pad-desktop-props();
+    }
+}

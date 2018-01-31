@@ -1,0 +1,65 @@
+$mobile-condition: "(max-width: 1279px)";
+// $tablet-condition: "(min-width: 768px)";
+$desktop-condition: "(min-width: 1280px)";
+
+$desktop-padding: 25px;
+
+$page-header-min-height: 48px;
+$page-header-min-height-desktop: 71px;
+
+$schedule-sidebar-width: 180px;
+$schedule-sidebar-width-desktop: 207px;
+$schedule-sidebar-mat-width-desktop: 245px;
+
+$room-description-min-height: 58px;
+$room-description-min-height-desktop: 44px;
+
+$room-timeline-height: 100%;
+$room-timeline-height-desktop: 28px;
+
+$timeline-block-width: 66px;
+$timeline-block-height: $room-description-min-height;
+$timeline-block-height-desktop: 28px;
+
+$timeline-margin-left: 170px;
+$timeline-margin-left-desktop: 210px;
+
+$line-color: #E9ECEF;
+$room-line-color: #f7f8f9;
+
+$primary-color: #007DFF;
+$primary-color-hover: #0059ff;
+$primary-color-active: #0011fd;
+$primary-color-active-mobile: #0059ff;
+$primary-color-disabled: #E9ECEF;
+
+$primary-color-light: #0070E0;
+
+$page-header-z-index: 800;
+$top-z-index: 10;
+$top-line-z-index: 900;
+
+$main-background-color: #FFFFFF;
+
+$slider-min-height: 56px;
+$slider-min-height-desktop: 46px;
+
+$day-timeline-min-height: 32px;
+$day-timeline-min-height-desktop: 46px;
+
+
+
+$proposed-meeting-color: #2B50FD;
+$vacant-color: #ffffff;
+$vacant-color-hover: #1D54FE;
+$vacant-color-active: #1D00FE;
+
+$vacant-color-active-mobile: #005CFF;
+// $vacant-color-mobile-disabled: #005CFF;
+// $clicked-color: #1D54FE;
+$clicked-color: #005fbd;
+
+$occupied-color: #D5DFE9;
+$occupied-color-hover: #98A9B9;
+$occupied-color-active: #8494a3;
+

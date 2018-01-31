@@ -1,0 +1,29 @@
+.field-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.field-container__icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    right: 0;
+    // // right: 0;
+    // right: 14px;
+    // fill: red;
+}
+
+.field-container__button {
+    position: absolute;
+    @include reset-button-style();
+    padding: 0;
+    right: 14px;
+    top: 16px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}

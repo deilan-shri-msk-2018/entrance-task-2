@@ -1,0 +1,14 @@
+@mixin pad-left {
+    @include pad-left-mobile();
+    @include pad-left-desktop();
+}
+
+@mixin pad-right {
+    @include pad-right-mobile();
+    @include pad-right-desktop();
+}
+
+@mixin pad {
+    @include pad-mobile();
+    @include pad-desktop();
+}

@@ -1,0 +1,34 @@
+.floor {
+    padding-top: 16px;
+
+    &:first-of-type {
+        padding-top: 22px;
+    }
+    
+    @media #{$desktop-condition} {
+        padding-top: 20px;
+        // width: $schedule-sidebar-width-desktop;
+    }
+}
+
+.floor__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    @media #{$desktop-condition} {
+        margin-bottom: 4px;
+    }
+    box-sizing: border-box;
+    width: $schedule-sidebar-width;
+    @include pad();
+
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.4px;
+    line-height: 13px;
+    color: #858E98;
+    text-transform: uppercase;
+}
+
+.floor__rooms {
+    @include reset-list-style();
+}

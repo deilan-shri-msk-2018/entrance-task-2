@@ -1,0 +1,13 @@
+{
+    "standard.enable": false,
+    "eslint.enable": false,
+    "tslint.enable": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "desktop-guide": true,
+        "desktop-images": true,
+        "touch-guide": true,
+        "touch-images": true,
+    }
+}
