@@ -1,0 +1,32 @@
+$padding-mobile: 16px;
+
+@mixin pad-left-mobile-props {
+    padding-left: $padding-mobile;
+}
+
+@mixin pad-left-mobile {
+    @media #{$mobile-condition} {
+        @include pad-left-mobile-props();
+    }
+}
+
+@mixin pad-right-mobile-props {
+    padding-right: $padding-mobile;
+}
+
+@mixin pad-right-mobile {
+    @media #{$mobile-condition} {
+        @include pad-right-mobile-props();
+    }
+}
+
+@mixin pad-mobile-props {
+    @include pad-left-mobile-props();
+    @include pad-right-mobile-props();
+}
+
+@mixin pad-mobile {
+    @media #{$mobile-condition} {
+        @include pad-mobile-props();
+    }
+}

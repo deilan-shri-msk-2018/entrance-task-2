@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local('Helvetica Neue'),
+        local('Helvetica-Neue'),
+        local('HelveticaNeue')
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: bold;
+    src:
+        local('Helvetica Neue Bold'),
+        local('Helvetica-Neue-Bold'),
+        local('HelveticaNeueBold')
+}
+  
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src:  local('Open Sans Regular'),
+        local('Open-Sans-Regular'),
+        url('../fonts/opensans.woff2') format('woff2'),
+        url('../fonts/opensans.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  src:  local('Open Sans Bold'),
+        local('Open-Sans-Bold'),
+        url('../fonts/opensansbold.woff2') format('woff2'),
+        url('../fonts/opensansbold.woff') format('woff');
+}
+
+// @font-face {
+//     font-family: 'Open Sans';
+//     font-style: normal;
+//     font-weight: normal;
+//     src: local('Open Sans Regular'), local('Open-Sans-Regular'), url('../fonts/opensans.woff2') format('woff2'), url('../fonts/opensans.woff') format('woff');
+// }
+// .page {
+//     font-family: HelveticaNeue;
+//     font-size: 15px;
+//     color: #000000;
+//     letter-spacing: 0;
+//     line-height: 17px;
+// }

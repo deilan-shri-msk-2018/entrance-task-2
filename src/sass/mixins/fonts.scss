@@ -1,0 +1,19 @@
+@mixin base-font() {
+    font-family: $base-font-family;
+    font-size: $font-size-md;
+    line-height: $base-font-line-height;
+    letter-spacing: $base-font-letter-spacing;
+    color: $base-font-color;
+    font-style: $base-font-style;
+    font-weight: $base-font-weight;
+    text-decoration: $base-font-decoration;
+    opacity: 1;
+}
+
+@mixin small-font() {
+    font-size: $font-size-sm;
+}
+
+@mixin font-bold() {
+    font-weight: $font-weight-bold;
+}

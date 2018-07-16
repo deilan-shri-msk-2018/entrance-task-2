@@ -1,0 +1,36 @@
+.datetime {
+    @media #{$desktop-condition} {
+        display: flex;
+    }
+}
+
+.datetime__datetime-title {
+    display: block;
+    @media #{$desktop-condition} {
+        display: none;
+    }
+}
+
+.datetime__date-title,
+.datetime__time-start-title,
+.datetime__time-end-title {
+    display: none;
+    @media #{$desktop-condition} {
+        display: block;
+    }
+}
+
+.datetime__date {
+    margin-bottom: 8px;
+    @media #{$desktop-condition} {
+        margin-bottom: 0;
+        flex-basis: 57%;
+        margin-right: 16px;
+    }
+}
+
+.datetime__time-range {
+    @media #{$desktop-condition} {
+        flex-basis: 40%;
+    }
+}

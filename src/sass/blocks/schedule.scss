@@ -1,0 +1,187 @@
+
+
+.schedule {
+    background-color: #F6F7F9; 
+    position: relative;
+    // height: 100vh;
+
+        &::before {
+            content: "";
+            position: fixed;
+            background-color: $main-background-color;
+            width: 100%;
+            z-index: 10;
+
+            height: $slider-min-height + $day-timeline-min-height;
+    
+            @media #{$desktop-condition} {
+                height: $slider-min-height-desktop;
+            }
+        }
+    
+    &__floors {
+        @include reset-list-style();
+
+        padding-top: $slider-min-height + $day-timeline-min-height;
+
+        @media #{$desktop-condition} {
+            padding-top: $slider-min-height-desktop;
+            // padding-top: $day-timeline-min-height-desktop;
+        }
+    }
+    &__header-inner {
+        background-color: $main-background-color;
+        // z-index: $page-header-z-index;
+        top: $page-header-min-height;
+        min-height: $slider-min-height + $day-timeline-min-height;
+
+        @media #{$desktop-condition} {
+            top: $page-header-min-height-desktop;
+            min-height: $slider-min-height-desktop;
+        }
+
+        width: 100%;
+        position: fixed;
+
+        // background-color: $main-background-color;
+        @include line-after();
+        z-index: 15;
+    }
+    
+    &__slider {
+        position: relative;
+        min-height: $slider-min-height;
+        // z-index: 20;
+
+        @media #{$desktop-condition} {
+            position: absolute;
+            min-height: $slider-min-height-desktop;
+            padding-right: 0;
+            width: $schedule-sidebar-mat-width-desktop;
+        }
+        @media #{$mobile-condition} {
+            @include line-after();
+        }
+        z-index: 2;
+        background-color: $main-background-color;
+    }
+
+    &__slider-date {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    &__day-timeline {
+        height: $day-timeline-min-height;
+        margin-left: $timeline-margin-left;
+        @media #{$desktop-condition} {
+            margin-left: $timeline-margin-left-desktop;
+            height: $day-timeline-min-height-desktop;
+        }
+        // z-index: 10;
+    }
+
+    &__calendar {
+        display: none;
+        &--active {
+            display: block;
+        }
+        background-color: $main-background-color;
+        position: fixed;
+        box-sizing: border-box;
+
+        top: $slider-min-height + $page-header-min-height;
+
+        @media #{$desktop-condition} {
+            top: $slider-min-height-desktop + $page-header-min-height-desktop;
+        }
+        left: 0;
+        width: 100%;
+        height: 380px;
+        padding: 16px;
+        box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+        border-radius: 0 0 8px 8px;
+        @media #{$desktop-condition} {
+            width: 604px;
+            height: 232px;
+
+            box-shadow: 0 1px 8px 0 rgba(0,44,92,0.28);
+            border-radius: 4px;
+        }
+        // TODO: z-index
+        z-index: 1100;
+    }
+
+    &__calendar-inner {
+        height: 100%;
+        width: 100%;
+        background-color: #E9ECEF;
+        border-radius: 8px;
+        @media #{$desktop-condition} {
+            border-radius: 4px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+    }
+
+    @media #{$desktop-condition} {
+        &::after {
+            content: "";
+            position: absolute;
+            width: $schedule-sidebar-mat-width-desktop;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: #FFFFFF;
+        }
+    }
+    
+    &__top {
+        position: relative;
+        z-index: 10;
+    }
+    
+    // .day-timeline__time {
+    //     margin-left: -15px;
+    // }
+
+}
+
+.schedule__slider-inner {
+    @include container();
+    @include pad();
+    // background-color: $main-background-color;
+}
+
+// .day-timeline__list {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+// }
+
+// @media #{$desktop-condition} {
+//     .schedule__body::before {
+//         content: "";
+//         position: absolute;
+//         height: 100%;
+//         width: $schedule-sidebar-width-desktop;
+//         background-color: $main-background-color;
+//     }
+// }
+
+// .day-timeline__item-current {
+//     // z-index: 100;
+//     height: 100%;
+//     color: #858E98;
+//     font-size: $font-size-xs;
+//     line-height: 13px;
+//     letter-spacing: 0.4px;
+//     font-weight: bold;
+
+//     margin-left: $schedule-sidebar-width;
+//     align-self: center;
+// }

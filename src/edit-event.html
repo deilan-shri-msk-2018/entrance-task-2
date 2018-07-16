@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Яндекс Переговорки: Редактирование встречи</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.0.js"></script>
+</head>
+
+<body class="page">
+  <div style="display:none">
+    <include src="build/img/symbols.svg"></include>
+  </div>
+  <div class="page__header page__header--unfixed">
+    <header class="page__header-inner page-header">
+      <h1 class="page-header__logo">
+        <a href="index.html">
+          <svg class="page-header__logo-img">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+      </h1>
+    </header>
+  </div>
+  <main class="page__body page-body">
+    <form class="event-form event-form--edit">
+      <div class="event-form__container">
+        <div class="event-form__header page__container-mobile">
+          <h2 class="event-form__title">Редактирование встречи</h2>
+          <button type="button" class="event-form__close-button button button--round">
+            <svg class="button__icon">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+        <fieldset class="event-form__fieldset">
+          <div class="page__container-mobile">
+            <h3 class="event-form__legend">Тема</h3>
+            <div class="field-container event-form__field">
+              <input value="Тестовое задание в ШРИ" id="topic" type="text" class="field" placeholder="О чём будете говорить?">
+              <button type="button" class="field-container__button">
+                <svg class="field-container__icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="event-form__fieldset event-form__fieldset--line">
+          <div class="page__container-mobile datetime">
+            <h3 class="event-form__legend datetime__datetime-title">Дата и время</h3>
+            <section class="datetime__date">
+              <h3 class="event-form__legend datetime__date-title">Дата</h3>
+              <div class="field-container">
+                <input id="date" type="text" class="field" value="14 декабря, 2017">
+                <button type="button" class="field-container__button">
+                  <svg class="field-container__icon">
+                    <use xlink:href="#icon-calendar"></use>
+                  </svg>
+                </button>
+              </div>
+            </section>
+            <section class="datetime__time-range time-range">
+              <div class="time-range__start">
+                <label for="time-start" class="datetime__time-start-title event-form__legend">Начало</label>
+                <input id="time-start" class="time-range__field field" value="16:00">
+              </div>
+              <span class="time-range__separator">–</span>
+              <div class="time-range__end">
+                <label for="time-end" class="datetime__time-start-title event-form__legend">Конец</label>
+                <input id="time-end" class="time-range__field field" value="16:30">
+              </div>
+            </section>
+          </div>
+        </fieldset>
+        <fieldset class="event-form__fieldset event-form__fieldset--line">
+          <div class="page__container-mobile">
+            <h3 class="event-form__legend">Участники</h3>
+            <div class="dropdown">
+              <input type="text" class="dropdown__field field" placeholder="Например, Тор Одинович">
+              <ul class="dropdown__options-list">
+                <li class="dropdown__options-item">
+                  <article class="user">
+                    <img alt="Лекс Лютер" src="img/userpic1-md.jpg" height="24" width="24" class="user__pic">
+                    <section class="user__description">
+                      <span class="user__name">Лекс Лютер</span> ·
+                      <span class="user__floor">7 этаж</span>
+                    </section>
+                  </article>
+                </li>
+                <li class="dropdown__options-item">
+                  <article class="user">
+                    <img alt="Лекс Лютер" src="img/userpic4-sm.jpg" height="24" width="24" class="user__pic">
+                    <section class="user__description">
+                      <span class="user__name">Томас Андерсон</span> ·
+                      <span class="user__floor">2 этаж</span>
+                    </section>
+                  </article>
+                </li>
+                <li class="dropdown__options-item">
+                  <article class="user">
+                    <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="user__pic">
+                    <section class="user__description">
+                      <span class="user__name">Дарт Вейдер</span> ·
+                      <span class="user__floor">1 этаж</span>
+                    </section>
+                  </article>
+                </li>
+                <li class="dropdown__options-item">
+                  <article class="user">
+                    <img alt="Лекс Лютер" src="img/userpic2-md.jpg" height="24" width="24" class="user__pic">
+                    <section class="user__description">
+                      <span class="user__name">Кларк Кент</span> ·
+                      <span class="user__floor">2 этаж</span>
+                    </section>
+                  </article>
+                </li>
+              </ul>
+              <ul class="dropdown__selected-list">
+                <li class="dropdown__selected-item">
+                  <article class="user">
+                    <img alt="Лекс Лютер" src="img/userpic1-md.jpg" height="32" width="32" class="user__pic">
+                    <span class="user__name dropdown__selected-item-content">Лекс Лютер</span>
+                    <button type="button" class="dropdown__remove-item">
+                      <svg class="dropdown__remove-img">
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="dropdown__selected-item">
+                  <article class="user">
+                    <img alt="Кларк Кент" src="img/userpic2-md.jpg" height="32" width="32" class="user__pic">
+                    <span class="user__name dropdown__selected-item-content">Кларк Кент</span>
+                    <button type="button" class="dropdown__remove-item">
+                      <svg class="dropdown__remove-img">
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="dropdown__selected-item">
+                  <article class="user">
+                    <img alt="Дарт Вейдер" src="img/userpic3-sm.jpg" height="32" width="32" class="user__pic">
+                    <span class="user__name dropdown__selected-item-content">Дарт Вейдер</span>
+                    <button type="button" class="dropdown__remove-item">
+                      <svg class="dropdown__remove-img">
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+              </ul>
+              <!-- <input list="attendees" class="dropdown__field field" placeholder="Например, Тор Одинович" />
+                <datalist id="attendees">
+                  <option value="1">
+                    <span class="dropdown__username">Лекс Лютер</span> ·
+                    <span class="dropdown__floor">7 этаж</span>
+                  </option>
+                  <option value="2">
+                    <span class="dropdown__username">Томас Андерсон</span> ·
+                    <span class="dropdown__floor">2 этаж</span>
+                  </option>
+                  <option value="3">
+                    <span class="dropdown__username">Дарт Вейдер</span> ·
+                    <span class="dropdown__floor">1 этаж</span>
+                  </option>
+                  <option value="4">
+                    <span class="dropdown__username">Кларк Кент</span> ·
+                    <span class="dropdown__floor">2 этаж</span>
+                  </option>
+                </datalist>
+                <ul class="dropdown__selected-list">
+                </ul> -->
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="event-form__fieldset">
+          <div class="page__container-mobile">
+            <h3 class="event-form__legend">Рекомендованные переговорки</h3>
+            <ul class="options">
+              <li class="options__item">
+                <div class="available-room">
+                  <input name="room" type="radio" class="available-room__field" value="gotem" id="gotem">
+                  <div class="available-room__time-range">
+                    <span class="available-room__time-start">16:00</span> –
+                    <span class="available-room__time-end">16:30</span>
+                  </div>
+                  <div class="available-room__room">
+                    <span class="available-room__title">Готем</span> ·
+                    <span class="available-room__floor">4 этаж</span>
+                  </div>
+                  <button type="button" class="avaiable-room__close">
+                      <svg class="avaiable-room__close-img">
+                        <use xlink:href="#icon-close-white"></use>
+                      </svg>
+                    </button>
+                </div>
+              </li>
+              <li class="options__item">
+                <div class="available-room">
+                  <input name="room" type="radio" class="available-room__field" id="nonplowed-field" value="nonplowed-field">
+                  <div class="available-room__time-range">
+                    <span class="available-room__time-start">16:00</span> –
+                    <span class="available-room__time-end">16:30</span>
+                  </div>
+                  <div class="available-room__room">
+                    <span class="available-room__title">Поле непаханное</span> ·
+                    <span class="available-room__floor">4 этаж</span>
+                  </div>
+                  <button type="button" class="avaiable-room__close">
+                      <svg class="avaiable-room__close-img">
+                        <use xlink:href="#icon-close-white"></use>
+                      </svg>
+                    </button>
+                </div>
+              </li>
+              <li class="options__item">
+                <div class="available-room">
+                  <input name="room" type="radio" class="available-room__field" id="dark-tower" value="dark-tower">
+                  <div class="available-room__time-range">
+                    <span class="available-room__time-start">16:00</span> –
+                    <span class="available-room__time-end">16:30</span>
+                  </div>
+                  <div class="available-room__room">
+                    <span class="available-room__title">Тёмная башня</span> ·
+                    <span class="available-room__floor">4 этаж</span>
+                  </div>
+                  <button type="button" class="avaiable-room__close">
+                      <svg class="avaiable-room__close-img">
+                        <use xlink:href="#icon-close-white"></use>
+                      </svg>
+                    </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+      </div>
+      <footer class="event-form__footer">
+        <div class="event-form__delete">
+          <button type="button" class="button event-form__delete-button">Удалить встречу</button>
+        </div>
+        <div class="event-form__cancel">
+          <button type="reset" class="button">Отмена</button>
+        </div>
+        <div class="event-form__save">
+          <button type="submit" class="button button--primary">Сохранить</button>
+        </div>
+      </footer>
+    </form>
+  </main>
+  <div class="modal-dialog">
+    <div class="modal-dialog__inner">
+      <div class="modal-dialog__content">
+        <div class="notification">
+          <svg class="notification__img notification__img--emoji2">
+            <use xlink:href="#icon-emoji2"></use>
+          </svg>
+          <section class="notification__title">Встреча создана!</section>
+          <section class="notification__datetime">
+              <time class="notification__date" datetime="2018-12-14">14 декабря</time>,
+              <time class="notification__start-time" datetime="2018-12-14T15:00">15:00</time> –
+              <time class="notification__start-time" datetime="2018-12-14T17:00">17:00</time>
+          </section>
+          <section class="notification__room">Готем · 4 этаж</section>
+          <section class="notification__actions">
+            <button type="button" class="button button--primary">Хорошо</button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-dialog">
+    <div class="modal-dialog__inner">
+      <div class="modal-dialog__content">
+        <div class="notification">
+          <svg class="notification__img notification__img--emoji1">
+            <use xlink:href="#icon-emoji1"></use>
+          </svg>
+          <section class="notification__title notification__title--single">Встреча будет удалена безвозвратно</section>
+          <section class="notification__actions">
+            <button type="button" class="button notification__action">Отмена</button>
+            <button type="button" class="button notification__action">Удалить</button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

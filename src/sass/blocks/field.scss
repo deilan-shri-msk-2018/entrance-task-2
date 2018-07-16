@@ -1,0 +1,27 @@
+.field {
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+
+    border: 2px solid $line-color;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+
+    &::placeholder {
+        font-size: $font-size-md;
+        color: #858E98;
+        letter-spacing: 0;
+    }
+
+    &:focus,
+    &:active {
+        border-color: $primary-color;
+    }
+
+    color: #000000;
+    letter-spacing: 0.55px;
+}

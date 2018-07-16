@@ -1,0 +1,72 @@
+
+.available-room {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    padding-left: 12px;
+
+    border: 2px solid $line-color;
+    background-color: $line-color;
+    border-radius: 4px;
+
+    display: flex;
+
+    &--active {
+        color: #FFFFFF;
+        background-color: $primary-color;
+        border-color: $primary-color;
+        cursor: auto;
+    }
+
+    cursor: pointer;
+}
+
+.avaiable-room__close-img {
+    width: 12px;
+    height: 12px;
+}
+
+.avaiable-room__close {
+    @include reset-button-style();
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.available-room--active .avaiable-room__close {
+    display: inline-block;
+}
+.available-room--hidden {
+    display: none;
+}
+
+.available-room__remove {
+    margin-left: auto;
+    margin-right: 5px;
+    @include reset-button-style();
+    color: #FFFFFF;
+}
+
+.available-room__field {
+    display: none;
+}
+
+.available-room__time-range {
+    width: 90px;
+    margin-right: 12px;
+    font-weight: bold;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

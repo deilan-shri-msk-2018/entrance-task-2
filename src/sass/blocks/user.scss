@@ -1,0 +1,12 @@
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user__pic {
+    margin-right: 8px;
+    border-radius: 50%;
+}
+

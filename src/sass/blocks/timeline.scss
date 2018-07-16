@@ -1,0 +1,183 @@
+.timeline {
+    // height: $timeline-block-height;
+    background-color: $occupied-color;
+    // width: 100%;
+    // padding-left: $schedule-sidebar-width-desktop;
+}
+
+// .timeline__occupied-slots {
+//     @include reset-list-style();
+
+//     display: flex;
+//     flex-direction: row;
+//     align-items: stretch;
+//     flex-wrap: wrap;
+
+//     @include hide-redundant-slots();
+// }
+
+.timeline__available {
+    background-color: #FFFFFF;
+    width: $timeline-available-width;
+    height: 100%;
+    margin-left: $timeline-available-margin-left;
+    margin-right: auto;
+    // overflow: hidden;
+
+    position: relative;
+}
+
+.timeline__current-time {
+    height: 100%;
+    width: $current-time-offset-left;
+    background-color: $occupied-color;
+    position: absolute;
+    // // z-index: 5;
+}
+
+.room--disabled .timeline__current-time {
+    width: 100%;
+}
+
+.timeline-list {
+    @include reset-list-style();
+    display: flex;
+    height: 100%;
+    position: relative;
+    // z-index: 6;
+}
+
+.timeline__item {
+    flex-shrink: 0;
+    height: 100%;
+    position: absolute;
+    background: $occupied-color;
+    &:hover {
+        cursor: pointer;
+        background: $occupied-color-hover;
+    }
+    &:active {
+        background: $occupied-color-active;
+    }
+    // z-index: 7;
+}
+
+.timeline__meeting {
+    display: none;
+    position: absolute;
+    // left: 0;
+    // top: 0;
+    left: 0;
+    background-color: $main-background-color;
+    padding: 16px;
+    width: 500px;
+    z-index: 1000;
+    transform: translateX(-50%);
+
+    width: 360px;
+    top: $timeline-block-height;
+    @media #{$desktop-condition} {
+        width: 338px;
+        top: $timeline-block-height-desktop;
+    }
+
+    box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+    border-radius: 8px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+
+        border-bottom: 8px solid #FFFFFF;
+        z-index: 1000;
+    }
+}
+
+.timeline__item--active .timeline__meeting {
+    display: block;
+}
+
+.timeline-item {
+    @include reset-list-style();
+    display: flex;
+    height: 100%;
+}
+
+.timeline__item--vacant {
+    display: flex;
+}
+
+.timeline__item--vacant .timeline__link {
+    width: 100%;
+    height: 100%;
+    background-color: $vacant-color;
+    &:hover {
+        background-color: $vacant-color-hover;
+        border-radius: 2px;
+        &::before {
+            content: "+";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+        }
+    }
+    &:active {
+        background-color: $vacant-color-active-mobile;
+        @media #{$desktop-condition} {
+            background-color: $vacant-color-active;
+        }
+    }
+    position: relative;
+}
+
+.timeline-item {
+    // background-color: #FFFFFF;
+
+    // &--event {
+    //     background-color: $occupied-color;
+    // }
+}
+
+.timeline-item__unit {
+}
+
+// .timeline__occupied-slot {
+//     background-color: $occupied-color;
+//     height: $timeline-block-height;
+//     width: $timeline-block-width;
+//     &--15 {
+//         width: calc(#{$timeline-block-width} * 1/ 4);
+//     }
+//     &--30 {
+//         width: calc(#{$timeline-block-width} * 2 / 4 );
+//     }
+//     &--45 {
+//         width: calc(#{$timeline-block-width} * 3 / 4);
+//     }
+//     &--60 {
+//         width: calc(#{$timeline-block-width} * 4 / 4);
+//     }
+
+//     &--offset-15 {
+//         margin-left: calc(#{$timeline-block-width} * 1/ 4);
+//     }
+//     &--offset-30 {
+//         margin-left: calc(#{$timeline-block-width} * 2 / 4 );
+//     }
+//     &--offset-45 {
+//         margin-left: calc(#{$timeline-block-width} * 3 / 4);
+//     }
+//     &--offset-60 {
+//         margin-left: calc(#{$timeline-block-width} * 4 / 4);
+//     }
+// }

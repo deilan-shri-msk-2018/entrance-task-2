@@ -1,0 +1,12 @@
+.icon {
+    fill: rgba(0,0,0,0.4);
+
+    // &:hover {
+    //     fill: rgba(0,0,0,1)
+    // }
+
+    &--calendar,
+    &--close {
+        fill: #AFB4B8;
+    }
+}

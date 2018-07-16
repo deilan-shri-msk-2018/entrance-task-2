@@ -1,0 +1,63 @@
+$hour-minutes: 60;
+$timeline-unit: 15;
+$timeline-unit-width: $timeline-block-width * ($timeline-unit / $hour-minutes);
+
+$hour-width: $timeline-block-width;
+$minute-width: $hour-width / 60;
+
+$hour-start: 8;
+$minute-start: 0;
+
+$hour-end: 23;
+$minute-end: 0;
+
+$hours-min: 0;
+$hours-max: $hour-end - $hour-start;
+
+$total-hours-count: $hour-end - $hour-start;
+$total-minutes-count: $total-hours-count * $hour-minutes;
+
+$timeline-available-margin-left: ($hours-min + 1) * $hour-width;
+$timeline-available-width: $total-hours-count * $hour-width;
+
+@function get-time-offset($hours, $minutes) {
+    @return ($hours - $hour-start) * $hour-width + ($minutes - $minute-start) * $minute-width;
+}
+
+@function get-start-time-margin-left($hour, $minute) {
+    @return ($hour - $hour-start) * $hour-width + ($minute - $minute-start) * $minute-width;
+}
+@function get-duration-width($hours, $minutes) {
+    @return $hours * $hour-width + $minutes * $minute-width;
+}
+
+@for $i from $hour-start through $hour-start + $total-hours-count {
+    @for $j from 0 through 59 {
+        .meeting--start-time--#{$i}-#{$j} {
+            margin-left: get-start-time-margin-left($i, $j);
+        }
+    }
+}
+
+@mixin meeting-duration-width($i, $j) {
+    .meeting--duration--#{$i} {
+        width: get-duration-width($i, 0);
+    }
+    .meeting--duration--#{$i}-#{$j} {
+        width: get-duration-width($i, $j);
+    }
+}
+
+@for $i from 0 through $total-hours-count {
+    @if $i != $total-hours-count {
+        @for $j from 0 through 59 {
+            @include meeting-duration-width($i, $j);
+        }
+    } @else {
+        @include meeting-duration-width($i, 0);
+    }
+}
+
+
+
+$current-time-offset-left: get-time-offset($hours: 11, $minutes: 5);

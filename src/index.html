@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Яндекс Переговорки: Главная</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.0.js"></script>
+</head>
+
+<body class="page">
+  <div style="display:none">
+    <include src="build/img/symbols.svg"></include>
+  </div>
+  <div class="page__header">
+    <header class="page__header-inner page-header">
+      <h1 class="page-header__logo">
+        <a>
+          <svg class="page-header__logo-img">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+      </h1>
+      <a href="create-event.html" class="page-header__create-event button button--primary">Создать встречу</a>
+    </header>
+  </div>
+  <main class="page__schedule schedule">
+    <ul class="schedule__floors">
+      <li class="floor">
+        <h3 class="floor__title schedule__top">7 этаж</h3>
+        <ul class="floor__rooms">
+          <li class="room room--disabled">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Ржавый Фред</h4>
+              <span class="room__capacity">3–6 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Прачечная</h4>
+              <span class="room__capacity">до 10 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--11-5 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--14-10 meeting--duration--8-50">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room room--active">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Жёлтый дом</h4>
+              <span class="room__capacity">до 10 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--11-5 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--13-50 meeting--duration--1-10">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--15-0 meeting--duration--2-0">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--17-0 meeting--duration--6-0">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room room--disabled">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Оранжевый тюльпан</h4>
+              <span class="room__capacity">до 10 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="floor">
+        <h3 class="floor__title schedule__top">6 этаж</h3>
+        <ul class="floor__rooms">
+          <li class="room">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Джокер</h4>
+              <span class="room__capacity">3–6 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--11-5 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--12-50 meeting--duration--0-40">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--15-20 meeting--duration--1-30">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--17-10 meeting--duration--1-0">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--19-50 meeting--duration--3-10">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Мариванна</h4>
+              <span class="room__capacity">3–6 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item meeting meeting--start-time--11-0 meeting--duration--2-10">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--13-10 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--14-40 meeting--duration--1-15">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--16-50 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--18-40 meeting--duration--4-20">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Тонкий Боб</h4>
+              <span class="room__capacity">3–6 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item meeting meeting--start-time--11-0 meeting--duration--1-20">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--12-20 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--13-35 meeting--duration--3-0">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--17-20 meeting--duration--1-20">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--21-40 meeting--duration--1-20">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Чёрная вдова</h4>
+              <span class="room__capacity">3–6 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item meeting meeting--start-time--10-30 meeting--duration--1-10">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--11-40 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--13-20 meeting--duration--0-15">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--15-20 meeting--duration--1-30">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--17-15 meeting--duration--1-25">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--19-40 meeting--duration--3-20">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="room">
+            <div class="room__description schedule__top">
+              <h4 class="room__title">Белорусский ликёр</h4>
+              <span class="room__capacity">3–6 человек</span>
+            </div>
+            <div class="room__timeline timeline">
+              <div class="timeline__available">
+                <div class="timeline__current-time"></div>
+                <ul class="timeline-list">
+                  <li class="timeline__item meeting meeting--start-time--10-0 meeting--duration--1-30">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item timeline__item--vacant meeting meeting--start-time--11-30 meeting--duration--0-55">
+                    <a class="timeline__link" href="create-event.html"></a>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--12-45 meeting--duration--4-5">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--17-10 meeting--duration--0-15">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--17-40 meeting--duration--0-30">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                  <li class="timeline__item meeting meeting--start-time--18-30 meeting--duration--4-30">
+                    <article class="timeline__meeting meeting-details">
+                      <h3 class="meeting-details__title">Рассуждения о высоком</h3>
+                      <section class="meeting-details__description">
+                        <time class="meeting-details__date" datetime="2017-12-14">14 декабря</time>,
+                        <time class="meeting-details__start-time" datetime="2017-12-14T15:00">15:00</time> –
+                        <time class="meeting-details__end-time" datetime="2017-12-14T17:00">17:00</time> ·
+                        <span class="meeting-details__room">Жёлтый дом</span>
+                      </section>
+                      <section class="meeting-details__attendees">
+                        <img alt="Лекс Лютер" src="img/userpic3-sm.jpg" height="24" width="24" class="meeting-details__userpic">
+                        <span class="meeting-details__attendees-details">
+                          <span class="meeting-details__owner">Дарт Вейдер</span>
+                          <span class="meeting-details__attendees-count">и 12 участников</span>
+                        </span>
+                      </section>
+                      <button type="button" class="meeting-details__edit"><svg class="meeting-details__edit-img"><use xlink:href="#icon-edit"></use></svg></button>
+                    </article>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="schedule__header-inner">
+      <div class="schedule__slider">
+        <div class="schedule__slider-inner">
+          <div class="slider">
+            <button type="button" class="slider__prev">
+              <svg class="slider__img slider__img--left">
+                <use xlink:href="#icon-arrow2"></use>
+              </svg>
+            </button>
+            <time class="slider__content schedule__slider-date" datetime="2017-12-14">14 дек · Сегодня</time>
+            <button type="button" class="slider__next">
+              <svg class="slider__img slider__img--right">
+                <use xlink:href="#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="schedule__calendar">
+          <div class="schedule__calendar-inner">Календарь</div>
+        </div>
+      </div>
+      <div class="schedule__day-timeline day-timeline">
+        <div class="day-timeline__current-time">
+          <span class="day-timeline__time">11:05</span>
+        </div>
+        <ul class="day-timeline__list">
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">08:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">09:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">10:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">11:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">12:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">13:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">14:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">15:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">16:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">17:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">18:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">19:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">20:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">21:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">22:00</span>
+          </li>
+          <li class="day-timeline__item">
+            <span class="day-timeline__time">23:00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <div class="modal-dialog">
+    <div class="modal-dialog__inner">
+      <div class="modal-dialog__content">
+        <div class="notification">
+          <svg class="notification__img notification__img--emoji2">
+            <use xlink:href="#icon-emoji2"></use>
+          </svg>
+          <section class="notification__title">Встреча создана!</section>
+          <section class="notification__datetime">
+              <time class="notification__date" datetime="2018-12-14">14 декабря</time>,
+              <time class="notification__start-time" datetime="2018-12-14T15:00">15:00</time> –
+              <time class="notification__start-time" datetime="2018-12-14T17:00">17:00</time>
+          </section>
+          <section class="notification__room">Готем · 4 этаж</section>
+          <section class="notification__actions">
+            <button type="button" class="button button--primary">Хорошо</button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-dialog">
+    <div class="modal-dialog__inner">
+      <div class="modal-dialog__content">
+        <div class="notification">
+          <svg class="notification__img notification__img--emoji1">
+            <use xlink:href="#icon-emoji1"></use>
+          </svg>
+          <section class="notification__title notification__title--single">Встреча будет удалена безвозвратно</section>
+          <section class="notification__actions">
+            <button type="button" class="button notification__action">Отмена</button>
+            <button type="button" class="button notification__action">Удалить</button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/picturefill.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

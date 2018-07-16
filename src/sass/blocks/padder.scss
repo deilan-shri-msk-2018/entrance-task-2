@@ -1,0 +1,7 @@
+.page__padder--mobile {
+    @include pad-mobile();
+}
+
+.padder {
+    @include pad();
+}

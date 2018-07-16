@@ -1,0 +1,33 @@
+@mixin container-common-props {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin container-mobile-props {
+    @include container-common-props();
+    width: 360px;
+}
+
+@mixin container-desktop-props {
+    @include container-common-props();
+    // width: 1280px;
+    width: 100%;
+}
+
+@mixin container-mobile {
+    @media #{$mobile-condition} {
+        @include container-mobile-props();
+    }
+}
+
+@mixin container-desktop {
+    @media #{$desktop-condition} {
+        @include container-desktop-props();
+    }
+}
+
+@mixin container {
+    @include container-mobile();
+    @include container-desktop();
+}
